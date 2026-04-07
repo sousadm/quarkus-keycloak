@@ -4,10 +4,12 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 
 @ApplicationScoped
 public class ManagerService {
 
+	@Inject
 	@RestClient
 	ManagerClient apiManagerClient;
 
