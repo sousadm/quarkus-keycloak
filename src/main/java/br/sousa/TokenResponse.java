@@ -1,21 +1,17 @@
 package br.sousa;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import io.quarkus.oidc.client.Tokens;
 
 public class TokenResponse {
 
-    @JsonProperty("access_token")
     public String accessToken;
-
-    @JsonProperty("refresh_token")
+    public Long accessTokenExpiresAt;
     public String refreshToken;
 
-    @JsonProperty("scope")
-    public String scope;
+    public TokenResponse(Tokens tokens) {
+        this.accessToken = tokens.getAccessToken();
+        this.accessTokenExpiresAt = tokens.getAccessTokenExpiresAt();
+        this.refreshToken = tokens.getRefreshToken();
+    }
 
-    @JsonProperty("token_type")
-    public String tokenType;
-
-    @JsonProperty("expires_in")
-    public Long expiresIn;
 }
