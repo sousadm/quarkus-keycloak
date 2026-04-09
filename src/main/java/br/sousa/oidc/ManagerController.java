@@ -1,4 +1,4 @@
-package br.sousa;
+package br.sousa.oidc;
 
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
@@ -10,14 +10,12 @@ import jakarta.ws.rs.core.MediaType;
 public class ManagerController {
 
     @Inject
-    ManagerService authService;
+    ManagerService managerService;
 
     @GET
     @Path("/token")
     @Produces(MediaType.APPLICATION_JSON)
     public TokenResponse getToken() {
-        return authService.obterToken();
+        return managerService.obterToken();
     }
-    
 }
-
