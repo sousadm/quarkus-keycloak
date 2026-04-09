@@ -1,4 +1,4 @@
-package br.sousa;
+package br.sousa.oidc;
 
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;

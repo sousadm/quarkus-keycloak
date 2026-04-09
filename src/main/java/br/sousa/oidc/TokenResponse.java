@@ -1,4 +1,4 @@
-package br.sousa;
+package br.sousa.oidc;
 
 import io.quarkus.oidc.client.Tokens;
 
