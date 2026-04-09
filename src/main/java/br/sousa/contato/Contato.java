@@ -7,4 +7,5 @@ import jakarta.persistence.Entity;
 public class Contato extends PanacheEntity {
     public String nome;
     public String fone;
+    public Boolean ativo;
 }
